@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signature classifier</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <article>
+        <section class="switch">
+            <div class="one-input">
+                <font class="input-title">Width</font>
+                <input class="input" oninput="changeCanvasSize();" type="number" id="canvasWidth" value="200">
+            </div>
+            <div class="one-input">
+                <font class="input-title">Height</font>
+                <input class="input" oninput="changeCanvasSize();" type="number" id="canvasHeight" value="200">
+            </div>
+        </section>
+        <section class="canvas-container">
+            <canvas width="200" height="200" id="signature"></canvas>
+        </section>
+        <section class="buttons-container">
+            <a id="clearCanvasBut" onclick="clearCanvas(); createSphere(this, event);" class="clear">Clear</a>
+            <a id="sendToServerBut" onclick="sendToServer(); createSphere(this, event);" class="send">Send To Server</a>
+        </section>
+        <div id="result"></div>
+    </article>
+</body>
+</html>
